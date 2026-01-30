@@ -1,0 +1,12 @@
+# React-Spring-tailwindDemo-Backend
+React-Spring-tailwindDemo-Backend/target/
+
+#React-spring-tailwindDemo-Frontend
+React-spring-tailwindDemo-Frontend/node_modules/
+
+# IDE files
+.idea/
+*.iml
+
+# Environment variables
+.env
