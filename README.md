@@ -1,0 +1,14 @@
+Project Description:- Full Stack Application with Spring Boot, React, and JWT Security This project is a full-stack application consisting of a Spring Boot backend and a React frontend. The backend provides secure RESTful APIs using Spring Security and JWT (JSON Web Token) authentication, while the frontend is responsible for interacting with these APIs and presenting data to users. The application follows a clean and layered architecture on the backend and uses modern frontend practices to communicate securely with protected APIs.
+
+Tech Stack:- Backend- Java Spring Boot Spring Security JWT (JSON Web Token) Maven REST APIs Frontend- React JavaScript HTML Tailwind CSS
+
+Key Features:- 1-Secure authentication using JWT tokens 2-Spring Security for authorization and access control 3-Stateless backend architecture 4-RESTful APIs for frontend communication 5-React-based frontend for user interaction 6-Clean separation between frontend and backend 7-Easy integration between frontend and backend services
+
+Security Overview:- 1-User authentication with JWT 2Token-based authorization for protected endpoints 3-Stateless session management 4-Secure API access via HTTP Authorization headers
+
+Purpose of the Project:- This project is created for learning and practice purposes, focusing on: 1-Full-stack application development 2-Implementing secure authentication using Spring Security and JWT 3-Connecting a React frontend with a secured backend 4-Understanding real-world backend and frontend interaction
+
+Running the Project Locally 1-Clone the repository 2-Start the Spring Boot backend 3-Start the React frontend 4-if using react go to register page and enter username and password and then using the same username and password do login once login is succesfull you will be directed to the home page where you can perform all the crud operations because the Jwt token is integrated with all the crud operation in frontend: 5- if you are using postman first go to http://localhost:8080/register in the body send username and password then go to http://localhost:8080/login and use the same username and password once you have succesfull login in return you will get a jwt-token which you can use to send various requests by pasting it into bearer token.once you login succesfully the token is valid for 30 minutes: Additional info--> password is saved in the database in hashed form.
+Additional info--> if you are sending any requests related to crud operation please check the console to confirm the request status. Also i know this project is really basic and lack many crucial features but i made this project 
+durinng my learning of backend topics .In future i wil make better projects using my learned skills and experience.
+Thanks for reading this description and using my project,Have a great day 
