@@ -4,6 +4,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import javax.crypto.KeyGenerator;
@@ -23,6 +24,7 @@ public class JwtServiceClass {
 
 //Stores the Base64-encoded secret key
 // Used to:Sign JWT, Verify JWT
+
 private String secretKey;
 
 //Runs once when application starts
