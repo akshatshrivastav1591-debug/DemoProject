@@ -12,3 +12,4 @@ Running the Project Locally 1-Clone the repository 2-Start the Spring Boot backe
 Additional info--> if you are sending any requests related to crud operation please check the console to confirm the request status. Also i know this project is really basic and lack many crucial features but i made this project 
 durinng my learning of backend topics .In future i wil make better projects using my learned skills and experience.
 Thanks for reading this description and using my project,Have a great day 
+In version v1.0  I have Sucessfully dockerize  the existing demo project
