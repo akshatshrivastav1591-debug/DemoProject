@@ -10,7 +10,7 @@ export default function CreateOperation() {
       bikeName: name.current.value,
       bikeOwner: owner.current.value,
     };
-    const response = await fetch("http://localhost:8080/getdata", {
+    const response = await fetch("http://localhost:8091/getdata", {
       method: "POST",
       headers: { "Content-Type": "application/json",
       Authorization:`Bearer ${localStorage.getItem("token")}`
@@ -30,7 +30,7 @@ export default function CreateOperation() {
       bikeName: name.current.value,
       bikeOwner: owner.current.value,
     };
-    const response = await fetch("http://localhost:8080/getdata", {
+    const response = await fetch("http://localhost:8091/getdata", {
       method: "PUT",
       headers: { "Content-Type": "application/json" ,
       Authorization:`Bearer ${localStorage.getItem("token")}`
@@ -50,7 +50,7 @@ export default function CreateOperation() {
       bikeName: name.current.value,
       bikeOwner: owner.current.value,
     };
-    const response = await fetch("http://localhost:8080/getdata", {
+    const response = await fetch("http://localhost:8091/getdata", {
       method: "DELETE",
       headers: { "Content-Type": "application/json",
       Authorization:`Bearer ${localStorage.getItem("token")}`

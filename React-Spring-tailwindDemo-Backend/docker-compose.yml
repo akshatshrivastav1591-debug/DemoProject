@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8091:8080"
+    restart: on-failure
+    environment:
+      # These MUST match the values in the mysql section below
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/deploymentdemo
+      SPRING_DATASOURCE_USERNAME: akshat
+      SPRING_DATASOURCE_PASSWORD: root
+    networks:
+      - student-network
+    depends_on:
+      mysql:
+        condition: service_healthy
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_USER: akshat
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: deploymentdemo
+    ports:
+      - 3309:3306
+    networks:
+      - student-network
+    volumes:
+      - mysql-s-data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p1234" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+networks:
+  student-network:
+    driver: bridge
+volumes:
+  mysql-s-data:

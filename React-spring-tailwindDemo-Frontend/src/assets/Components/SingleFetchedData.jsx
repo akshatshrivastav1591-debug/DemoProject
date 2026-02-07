@@ -12,7 +12,7 @@ export default function SingleFecthedData({ OnChange }) {
   async function SingleFetchedBike() {
     const Bikeid = CurrentValue.current.value;
     const response = await fetch(
-      `http://localhost:8080/getSingleData/${Bikeid}`,{
+      `http://localhost:8091/getSingleData/${Bikeid}`,{
         headers:{
           Authorization:`Bearer ${localStorage.getItem("token")}`
         }

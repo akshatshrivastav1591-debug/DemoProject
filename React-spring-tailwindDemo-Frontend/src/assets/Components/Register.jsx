@@ -11,7 +11,7 @@ export function RegistredUser() {
       ownername: userName.current.value,
       ownerpassword: userPassword.current.value,
     };
-    const response = await fetch("http://localhost:8080/register", {
+    const response = await fetch("http://localhost:8091/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(NewUSer),
